@@ -17,6 +17,8 @@ end
 
 class Story
   include ::Mongoid::Document
+  include ::Mongoid::Attributes::Dynamic
+
   def tell; text; end
   def whatever(n, _); tell*n; end
   def self.count; end
